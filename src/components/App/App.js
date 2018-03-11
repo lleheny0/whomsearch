@@ -5,7 +5,6 @@ import logo from './logo.svg';
 import './style.css';
 
 class App extends Component {
-
   render() {
     const { className, ...props } = this.props;
     return (
@@ -17,13 +16,19 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Link to='about'><button>Test React Router</button></Link>
+        <Link to="about">
+          <button>Test React Router</button>
+        </Link>
         <br />
         <br />
-        <button onClick={this.props.actions.expressTest}>Test if Express is working</button>
+        <button onClick={this.props.actions.expressTest}>
+          Test if Express is working
+        </button>
         <br />
         <br />
-        <button onClick={this.props.actions.dbTest}>Test if Express and Sequelize are working</button>
+        <button onClick={this.props.actions.dbTest}>
+          Test if Express and Sequelize are working
+        </button>
         <div style={{ padding: '30px' }}>{this.props.results}</div>
       </div>
     );
