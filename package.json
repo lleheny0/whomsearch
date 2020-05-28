@@ -3,22 +3,22 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "set PORT=3001 && node ./bin/www",
+    "start": "set PORT=3001 && nodemon ./bin/www",
     "dev": "concurrently \"npm run start\" \"cd client && npm run start\""
   },
   "dependencies": {
+    "clean-css": "^4.1.11",
     "concurrently": "^5.2.0",
+    "constantinople": "^3.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "eslint": "^6.6.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "lodash": "^4.17.15",
     "morgan": "~1.9.1",
-    "constantinople": "^3.1.1",
-    "clean-css": "^4.1.11"
-  },
-  "devDependencies": {
-    "eslint": "^6.6.0",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.5"
   },
   "eslintConfig": {
@@ -41,6 +41,12 @@
     "trailingComma": "all",
     "semi": true,
     "singleQuote": true,
-    "quoteProps": "as-needed"
+    "quoteProps": "as-needed",
+    "arrowParens": "avoid"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "client"
+    ]
   }
 }
