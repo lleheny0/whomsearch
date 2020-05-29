@@ -91,7 +91,9 @@
     "plugins": [
       "react"
     ],
-    "rules": {}
+    "rules": {
+      "no-empty-pattern": 0
+    }
   },
   "prettier": {
     "trailingComma": "all",
